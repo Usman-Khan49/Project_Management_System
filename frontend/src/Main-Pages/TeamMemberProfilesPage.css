@@ -1,0 +1,345 @@
+body {
+  background-color: #000000;
+  color: #ffffff;
+  font-family: 'Roboto', sans-serif;
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+  align-items: center;
+}
+
+.together {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.header {
+  display: flex;
+  width: 93vw;
+  height: 10vh;
+  background-color: #000000;
+  color: #ffffff;
+  align-items: center;
+  margin-top: 1%;
+  margin-left: 1%;
+  border-radius: 15px;
+}
+
+.header h1 {
+  margin-left: 1.5%;
+  font-weight: 500;
+  font-size: 2vw;
+}
+
+.floating-logo {
+  width: 3vw;
+  height: 5vh;
+  margin-left: 2%;
+}
+
+.shortcut {
+  display: flex;
+  width: 100vw;
+  height: 90vh;
+  flex-direction: row;
+}
+
+.overview {
+  display: flex;
+  width: 5vw;
+  height: 95%;
+  margin-top: 0%;
+  margin-left: 1%;
+  border-radius: 15px;
+  background-color: #000000;
+  flex-direction: column;
+  align-items: center;
+}
+
+.main {
+  display: flex;
+  width: 95vw;
+  height: 100%;
+  background-color: #00000000;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 20px;
+  box-sizing: border-box;
+  overflow-y: auto;
+}
+
+@keyframes float {
+  0%, 100% { 
+    transform: translateY(0); 
+  }
+  50% { 
+    transform: translateY(-7px); 
+  }
+}
+
+.floating-logo {
+  animation: float 3s ease-in-out infinite;
+}
+
+.header i {
+  margin-left: auto;
+  margin-right: 20px;
+  font-size: 25px;
+}
+
+.overview a {
+  font-size: 25px;
+  margin-top: 25%;
+  color: #ffffff;
+  padding: 8px;
+  border-radius: 12px;
+  transition: background-color 0.5s, opacity 0.5s;
+}
+
+.overview a:hover {
+  background-color: #3b82f6;
+  opacity: 0.8;
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 8px;
+  width: 80%;
+  max-width: 600px;
+  color: #000000;
+}
+
+.modal-content h2 {
+  margin-top: 0;
+}
+
+.modal-content input,
+.modal-content textarea,
+.modal-content select {
+  width: 95%;
+  padding: 8px;
+  margin-bottom: 10px;
+  border: 1px solid #3b82f6;
+  border-radius: 4px;
+}
+
+.modal-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+button {
+  padding: 12px 16px;
+  background-color: #000000;
+  color: #ffffff;
+  border-left: 2px solid #ffffff;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #ffffff;
+  color: #000000;
+  border: none;
+  transition: 0.5s;
+  border: 1px solid #000000;
+}
+
+.custom-cursor {
+  position: fixed;
+  width: 10px;
+  height: 10px;
+  background-color: rgb(255, 255, 255);
+  border-radius: 50%;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  z-index: 9999;
+}
+
+.custom-cursor.expanded {
+  transform: translate(-50%, -50%) scale(2);
+  opacity: 0.8;
+}
+
+button, input[type="search"] {
+  cursor: none;
+}
+
+/* New styles for help and support page */
+
+.help-section {
+  background-color: #1a1a1a;
+  padding: 20px;
+  border-radius: 8px;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.help-section h2 {
+  margin-top: 0;
+}
+
+.help-section details {
+  margin-bottom: 10px;
+}
+
+.help-section details summary {
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.help-section details p {
+  margin-top: 10px;
+}
+
+.help-section ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.help-section ul li {
+  margin-bottom: 10px;
+}
+
+.help-section ul li a {
+  color: #3b82f6;
+  text-decoration: none;
+}
+
+.help-section ul li a:hover {
+  text-decoration: underline;
+}
+
+.help-section form {
+  display: flex;
+  flex-direction: column;
+}
+
+.help-section form label {
+  margin-bottom: 10px;
+}
+
+.help-section form input,
+.help-section form textarea {
+  width: 100%;
+  padding: 8px;
+  margin-top: 5px;
+  border: 1px solid #3b82f6;
+  border-radius: 4px;
+  background-color: #2a2a2a;
+  color: #ffffff;
+}
+
+.help-section form button {
+  align-self: flex-start;
+  background-color: #3b82f6;
+  border: none;
+  color: #ffffff;
+}
+
+.help-section form button:hover {
+  background-color: #2563eb;
+}
+
+/* Team Management Styles */
+.team-management {
+  width: 100%;
+  padding: 20px;
+  background-color: #1a1a1a;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+.team-management h2, .team-management h3 {
+  margin-top: 0;
+}
+
+.add-member, .search-member {
+  margin-bottom: 20px;
+}
+
+.add-member input, .search-member input {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+  border: 1px solid #3b82f6;
+  border-radius: 4px;
+  background-color: #2a2a2a;
+  color: #ffffff;
+}
+
+.skill-matrix table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.skill-matrix th, .skill-matrix td {
+  padding: 10px;
+  border: 1px solid #3b82f6;
+  text-align: left;
+}
+
+.skill-matrix th {
+  background-color: #3b82f6;
+  color: #ffffff;
+}
+
+.skill-matrix tr:nth-child(even) {
+  background-color: #2a2a2a;
+}
+
+.skill-matrix tr:hover {
+  background-color: #3b82f6;
+  color: #ffffff;
+}
+
+/* Main Header Styles */
+.main-header {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.search-input {
+  width: 30%;
+  padding: 8px;
+  border: 1px solid #3b82f6;
+  border-radius: 4px;
+  background-color: #2a2a2a;
+  color: #ffffff;
+}
+
+.add-member-button {
+  background-color: #3b82f6;
+  border: none;
+  color: #ffffff;
+  padding: 12px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.add-member-button:hover {
+  background-color: #2563eb;
+}

@@ -1,0 +1,264 @@
+body {
+    background-color: #000000;
+    color: #ffffff;
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+    align-items: center;
+  }
+  
+  .together {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+  
+  .header {
+    display: flex;
+    width: 93vw;
+    height: 10vh;
+    background-color: #000000;
+    color: #ffffff;
+    align-items: center;
+    margin-top: 1%;
+    margin-left: 1%;
+    border-radius: 15px;
+  }
+  
+  .header h1 {
+    margin-left: 1.5%;
+    font-weight: 500;
+    font-size: 2vw;
+  }
+  
+  .floating-logo {
+    width: 3vw;
+    height: 5vh;
+    margin-left: 2%;
+  }
+  
+  .shortcut {
+    display: flex;
+    width: 100vw;
+    height: 90vh;
+    flex-direction: row;
+  }
+  
+  .overview {
+    display: flex;
+    width: 5vw;
+    height: 95%;
+    margin-top: 0%;
+    margin-left: 1%;
+    border-radius: 15px;
+    background-color: #000000;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .main {
+    display: flex;
+    width: 95vw;
+    height: 100%;
+    background-color: #00000000;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 20px;
+    box-sizing: border-box;
+    overflow-y: auto;
+  }
+  
+  @keyframes float {
+    0%, 100% { 
+      transform: translateY(0); 
+    }
+    50% { 
+      transform: translateY(-7px); 
+    }
+  }
+  
+  .floating-logo {
+    animation: float 3s ease-in-out infinite;
+  }
+  
+  .header i {
+    margin-left: auto;
+    margin-right: 20px;
+    font-size: 25px;
+  }
+  
+  .overview a {
+    font-size: 25px;
+    margin-top: 25%;
+    color: #ffffff;
+    padding: 8px;
+    border-radius: 12px;
+    transition: background-color 0.5s, opacity 0.5s;
+  }
+  
+  .overview a:hover {
+    background-color: #3b82f6;
+    opacity: 0.8;
+  }
+  
+  .modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+  }
+  
+  .modal-content {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    width: 80%;
+    max-width: 600px;
+    color: #000000;
+  }
+  
+  .modal-content h2 {
+    margin-top: 0;
+  }
+  
+  .modal-content input,
+  .modal-content textarea,
+  .modal-content select {
+    width: 95%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #3b82f6;
+    border-radius: 4px;
+  }
+  
+  .modal-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    margin-top: 20px;
+  }
+  
+  button {
+    padding: 12px 16px;
+    background-color: #000000;
+    color: #ffffff;
+    border-left: 2px solid #ffffff;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  button:hover {
+    background-color: #ffffff;
+    color: #000000;
+    border: none;
+    transition: 0.5s;
+    border: 1px solid #000000;
+  }
+  
+  .custom-cursor {
+    position: fixed;
+    width: 10px;
+    height: 10px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 50%;
+    pointer-events: none;
+    transform: translate(-50%, -50%);
+    z-index: 9999;
+  }
+  
+  .custom-cursor.expanded {
+    transform: translate(-50%, -50%) scale(2);
+    opacity: 0.8;
+  }
+  
+  button, input[type="search"] {
+    cursor: none;
+  }
+  
+  /* New styles for timeline management */
+  
+  .project-list {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+  
+  .project-timeline {
+    background-color: #1a1a1a;
+    padding: 20px;
+    border-radius: 8px;
+    width: 100%;
+  }
+  
+  .milestone-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+  }
+  
+  .milestone-item {
+    background-color: #2a2a2a;
+    padding: 15px;border-radius: 8px;
+  }
+  
+  .milestone-item h3 {
+    margin-top: 0;
+  }
+  
+  .rbc-calendar {
+    background-color: #2a2a2a;
+    border-radius: 8px;
+    padding: 10px;
+  }
+  
+  .rbc-event {
+    background-color: #3b82f6;
+  }
+  
+  .rbc-today {
+    background-color: rgba(59, 130, 246, 0.1);
+  }
+  
+  .rbc-header {
+    color: #ffffff;
+  }
+  
+  .rbc-off-range-bg {
+    background-color: #1a1a1a;
+  }
+  
+  .rbc-date-cell {
+    color: #ffffff;
+  }
+  
+  .rbc-toolbar button {
+    color: #ffffff;
+    background-color: #3b82f6;
+  }
+  
+  .rbc-toolbar button:hover {
+    background-color: #2563eb;
+  }
+  
+  .rbc-toolbar button:active,
+  .rbc-toolbar button.rbc-active {
+    background-color: #1d4ed8;
+  }
+  
+  .rbc-month-view,
+  .rbc-time-view,
+  .rbc-agenda-view {
+    border: 1px solid #3b82f6;
+  }
+  
+  
